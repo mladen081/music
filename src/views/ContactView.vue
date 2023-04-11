@@ -1,5 +1,8 @@
 <template>
-  <div class="h-screen bg-blue-600 pt-16">
+  <div class="contact-page h-screen pt-16">
+    <div class="img-cont">
+      <img src="@/assets/city_of_belgrade.jpg" alt="city of belgrade photo" />
+    </div>
     <div class="form-cont">
       <form class="form" ref="form" @submit.prevent="sendEmail">
         <label>Name</label>
@@ -68,6 +71,32 @@ export default {
 </script>
 
 <style>
+.contact-page::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("@/assets/contact_back.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-cont img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
 .form-cont {
   width: 40%;
   margin: 0 auto;
