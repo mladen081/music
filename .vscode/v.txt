@@ -1,0 +1,197 @@
+////////// 011 //////////
+
+Vue Language Feature (Volar) [VS Extensions]
+TypeScript Vue Plugin (Volar) [VS Extensions]
+ESLint [VS Extensions]
+Prettier [VS Extensions]
+
+
+////////// 013 //////////
+
+npm init vue@3
+    ---- Vitest for Unit Testing   - Yes
+    ---- ESLint for code quality   - Yes
+    ---- Prettier for code formatting   - Yes
+
+npm install
+npm run dev
+
+////////// 014 //////////
+
+VS workspace:
+    ---- Autosave   - onFocusChange
+    ---- Tab Size   - 2
+    ---- Format On save   - *
+    ---- Default Formater   - Prettier
+    ---- CSS -> Lint: Unknown At Rules   - ignore
+
+////////// 015 //////////
+
+ESLint:
+
+"plugin:vue/vue3-essential"   ->   "plugin:vue/vue3-recommended",
+
+rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+  },
+
+////////// 032 //////////
+
+Tailwind
+
+npm install --save-dev tailwindcss postcss autoprefixer
+
+npx tailwindcss init  -p
+
+    ---- content: ["./index.html", "./src/**/*.{vue,js,ts}"],
+
+    ---- index.CSS
+        ---- @tailwind base;
+        ---- @tailwind components;
+        ---- @tailwind utilities;
+
+    ---- main.js
+        ---- import "@/index.css";
+
+    ---- index.html
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
+
+    ---- tailwind.config.js
+        extend: {
+          fontFamily: {
+            sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+          },
+        },
+        colors: {
+        "brand-gray-1": "#dadce0",
+        "brand-blue-1": "#1967d2",
+        "brand-green-1": "#137333",
+      },
+
+npm install --save-dev prettier-plugin-tailwindcss
+
+////////// 052 //////////
+
+"test:unit": "vitest --environment jsdom --coverage",
+
+npm run test:unit
+
+////////// 058 //////////
+
+    ---- vite.config.js
+        test: {
+          globals: true,
+        },
+
+    npm install --save-dev eslint-plugin-vitest-globals
+
+    ---- .eslint.cjs
+        "plugin|:vitest-globals/recomended",
+
+        env: {
+          "vitest-globals/env": true,
+        },
+
+////////// 063 //////////
+
+npm install --save-dev @testing-library/vue @testing-library/jest-dom @testing-library/user-event
+
+    ---- @/tests/setup.js
+        import { cleanup } from "@testing-library/vue";
+        import matchers from "@testing-library/jest-dom/matchers";
+        import { expect, afterEach } from "vitest";
+
+        expect.extend(matchers);
+
+        afterEach(() => {
+          cleanup();
+        });
+    
+    ---- vite.config.js
+        test: {
+          globals: true,
+          setupFiles: ["./tests/setup.js"],
+        },
+
+////////// 078 //////////
+
+testing playground chrome extension
+
+https://www.pngitem.com/pimgs/m/487-4876417_link-head-png-toon-link-face-png-transparent.png
+
+////////// 119 //////////
+
+npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/vue-fontawesome@latest-3
+
+import { createApp } from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import "@/index.css";
+import App from "@/App.vue";
+
+library.add(faSearch);
+
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app"); // builder patern
+
+////////// 182 //////////
+
+npm install --save vue-router@4
+
+////////// 217 //////////
+
+npm install --save -dev json-server
+
+////////// 220 //////////
+
+npm install --save axios
+
+////////// 252 //////////
+
+npm install --save pinia
+
+    ---- import { createPinia } from "pinia";
+    ---- const pinia = createPinia();
+    ---- .use(pinia)
+
+////////// 260 //////////
+
+npm install --save-dev @pinia/testing
+
+////////// 421 //////////
+
+npm install --save-dev typescript @vue/tsconfig @vue/eslint-config-typescript @types/jsdom @types/node
+
+    ---- tscongig.json
+    {
+      "extends": "@vue/tsconfig/tsconfig.web.json",
+      "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "tests/**/*"],
+      "exclude": [],
+      "compilerOptions": {
+        "composite": true,
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*"]
+        },
+        "types": ["vitest/globals", "@testing-library/jest-dom"]
+      }
+    }
+
+    ---- .esliny.cjs
+    "@vue/eslint-config-typescript",
+
+    ////////// 423 //////////
+
+    ---- env.t.ts
+    
