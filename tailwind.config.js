@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["Cormorant Garamond", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         "brand-gray-1": "#dadce0",
