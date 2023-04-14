@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-page h-screen pt-16">
+  <div class="contact-page h-screen px-16 pt-16">
     <div class="img-cont">
       <img src="@/assets/city_of_belgrade.jpg" alt="city of belgrade photo" />
     </div>
@@ -122,5 +122,15 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #888;
   color: #fff;
+}
+
+@media (max-width: 1800px) {
+  .contact-page {
+    flex-direction: column;
+  }
+
+  .form-cont {
+    max-width: 800px;
+  }
 }
 </style>
