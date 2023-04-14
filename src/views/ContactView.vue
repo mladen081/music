@@ -152,10 +152,4 @@ input[type="submit"]:hover {
     max-width: 800px;
   }
 }
-
-@media (max-width: 767px) {
-  .contact-page h1 {
-    font-size: 1.5em;
-  }
-}
 </style>

@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Cormorant Garamond", ...defaultTheme.fontFamily.serif],
+        sans: ["Cormorant Garamond", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         "brand-gray-1": "#dadce0",
@@ -15,6 +15,7 @@ module.exports = {
         "brand-blue-2": "#4285f4",
         "brand-green-1": "#137333",
         "brand-dark-blue-1": "#1f152e",
+        "brand-pink-1": "#f2f",
       },
       boxShadow: {
         blue: "0 0 3px 3px #4285f4",
