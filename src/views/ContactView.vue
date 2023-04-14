@@ -89,17 +89,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.img-cont img {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-}
-
-.form-cont {
-  width: 40%;
-  margin: 0 auto;
+  gap: 5px;
 }
 
 label {
@@ -110,19 +100,20 @@ input[type="text"],
 [type="email"],
 textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 6px;
+  margin-top: 4px;
   margin-bottom: 16px;
   resize: vertical;
 }
 
 input[type="submit"] {
+  width: 100%;
   background-color: #f2f;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
