@@ -1,31 +1,42 @@
 <template>
-  <div class="contact-page h-screen px-16 pt-16">
-    <div class="img-cont">
-      <img src="@/assets/city_of_belgrade.jpg" alt="city of belgrade photo" />
-    </div>
-    <div class="form-cont">
-      <form class="form" ref="form" @submit.prevent="sendEmail">
-        <label>Name</label>
-        <input type="text" v-model="name" name="name" placeholder="Your Name" />
-        <label>Email</label>
-        <input
-          type="email"
-          v-model="email"
-          name="email"
-          placeholder="Your Email"
-        />
-        <label>Message</label>
-        <textarea
-          name="message"
-          v-model="message"
-          cols="30"
-          rows="5"
-          placeholder="Message"
-        >
-        </textarea>
+  <div class="contact-page">
+    <h1>Send Me a Message</h1>
+    <div class="flex-cont">
+      <div class="img-cont">
+        <img src="@/assets/city_of_belgrade.jpg" alt="city of belgrade photo" />
+      </div>
+      <div class="form-cont">
+        <form class="form" ref="form" @submit.prevent="sendEmail">
+          <label class="visibility: hidden" for="name">Name</label>
+          <input
+            type="text"
+            v-model="name"
+            name="name"
+            placeholder="Your Name"
+            id="name"
+          />
+          <label class="visibility: hidden" for="email">Email</label>
+          <input
+            type="email"
+            v-model="email"
+            name="email"
+            placeholder="Your Email"
+            id="email"
+          />
+          <label class="visibility: hidden" for="message">Message</label>
+          <textarea
+            name="message"
+            v-model="message"
+            cols="30"
+            rows="5"
+            placeholder="Message"
+            id="message"
+          >
+          </textarea>
 
-        <input type="submit" value="Send" />
-      </form>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -71,21 +82,19 @@ export default {
 </script>
 
 <style>
-.contact-page::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
+.contact-page {
   background-image: url("@/assets/contact_back.jpg");
-  width: 100%;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #1f152e;
 }
 
 .contact-page {
+  height: 100vh;
+  padding: 64px 10px;
+}
+
+.flex-cont {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -94,6 +103,8 @@ export default {
 
 label {
   float: left;
+  color: #fff;
+  font-size: 1.5em;
 }
 
 input[type="text"],
@@ -112,25 +123,39 @@ textarea {
 input[type="submit"] {
   width: 100%;
   background-color: #f2f;
-  color: white;
+  color: #000;
   padding: 10px 20px;
-  border: none;
+  border: 3px solid #f2f;
   border-radius: 4px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #888;
-  color: #fff;
+  border: 3px solid #fff;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1700px) {
   .contact-page {
     flex-direction: column;
+    gap: unset;
+    height: auto;
+    padding: 80px 10px;
+  }
+
+  .flex-cont {
+    flex-direction: column;
+    gap: unset;
   }
 
   .form-cont {
+    margin-top: 60px;
     max-width: 800px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-page h1 {
+    font-size: 1.5em;
   }
 }
 </style>

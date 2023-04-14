@@ -6,3 +6,13 @@
 <script lang="ts" setup>
 import MainNav from "@/components/Navigation/MainNav.vue";
 </script>
+
+<style>
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 20px 0;
+  text-align: center;
+}
+</style>
