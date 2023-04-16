@@ -1,10 +1,12 @@
 <template>
   <main-nav />
   <router-view />
+  <main-footer />
 </template>
 
 <script lang="ts" setup>
 import MainNav from "@/components/Navigation/MainNav.vue";
+import MainFooter from "@/components/MainFooter.vue";
 </script>
 
 <style>

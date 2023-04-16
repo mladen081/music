@@ -1,5 +1,5 @@
 <template>
-  <div class="home-cont h-screen bg-brand-dark-blue-1 pt-16">
+  <div class="home-cont bg-brand-dark-blue-1 pt-16">
     <h1 style="margin-top: 35px">Coming Soon</h1>
 
     <main>
@@ -39,13 +39,13 @@ export default {
       isPlaying: false,
       songs: [
         {
-          title: "test 1",
-          artist: "test 1",
+          title: "test song 1",
+          artist: "test artist 1",
           src: "/s1.mp3",
         },
         {
-          title: "test 2",
-          artist: "test 2",
+          title: "test song 2",
+          artist: "test artist 2",
           src: "/s2.mp3",
         },
       ],
@@ -97,6 +97,10 @@ export default {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
   },
+  beforeUnmount() {
+    this.player.pause();
+    this.isPlaying = false;
+  },
 };
 </script>
 
@@ -106,6 +110,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 1000px;
 }
 
 main {
