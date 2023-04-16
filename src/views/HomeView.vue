@@ -110,7 +110,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 1000px;
+  height: 1100px;
 }
 
 main {
@@ -147,11 +147,10 @@ button:hover {
 }
 .play,
 .pause {
-  font-size: 20px;
   font-weight: 700;
   padding: 10px 15px;
   margin: 0px 15px;
-  border-radius: 8px;
+  border-radius: 6px;
   width: 150px;
   border: 1px solid #fff;
 }
@@ -187,13 +186,13 @@ button:hover {
 }
 
 @media (max-width: 767px) {
-  .controls {
-    flex-direction: column;
-  }
-
   .next,
   .prev {
     margin: 10px 0;
+  }
+
+  .home-cont {
+    height: 800px;
   }
 }
 </style>
