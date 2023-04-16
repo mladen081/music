@@ -10,6 +10,7 @@ import MainNav from "@/components/Navigation/MainNav.vue";
 <style>
 body {
   font-size: 1.4em;
+  color: #fff;
 }
 h1 {
   font-size: 2em;
@@ -25,6 +26,9 @@ h1 {
   }
   h1 {
     font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
   }
 }
 </style>
