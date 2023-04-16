@@ -110,6 +110,7 @@ label {
 input[type="text"],
 [type="email"],
 textarea {
+  color: #000;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;

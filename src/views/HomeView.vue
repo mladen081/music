@@ -39,13 +39,13 @@ export default {
       isPlaying: false,
       songs: [
         {
-          title: "Tannic Instrumental",
-          artist: "Nuisance",
+          title: "test 1",
+          artist: "test 1",
           src: "/s1.mp3",
         },
         {
-          title: "Enamored Instrumental",
-          artist: "Nuisance",
+          title: "test 2",
+          artist: "test 2",
           src: "/s2.mp3",
         },
       ],
