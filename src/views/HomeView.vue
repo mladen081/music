@@ -106,7 +106,7 @@ export default {
 
 <style scoped>
 .home-cont {
-  background-image: url("@/assets/home_back_new.jpg");
+  background-image: url("@/assets/contact_back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -143,7 +143,8 @@ button {
   cursor: pointer;
 }
 button:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  color: #6c9bcf;
 }
 .play,
 .pause {
@@ -179,10 +180,12 @@ button:hover {
   cursor: pointer;
 }
 .playlist .song:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  color: #6c9bcf;
 }
 .playlist .song.playing {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  color: #6c9bcf;
 }
 
 @media (max-width: 767px) {

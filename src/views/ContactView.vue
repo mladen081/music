@@ -123,10 +123,10 @@ textarea {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #f2f;
+  background-color: #6c9bcf;
   color: #000;
   padding: 10px 20px;
-  border: 3px solid #f2f;
+  border: 3px solid #6c9bcf;
   border-radius: 4px;
   cursor: pointer;
 }
