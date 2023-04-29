@@ -106,11 +106,11 @@ export default {
 
 <style scoped>
 .home-cont {
-  background-image: url("@/assets/home_back.jpg");
+  background-image: url("@/assets/home_back_new.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 1100px;
+  height: 100vh;
 }
 
 main {
